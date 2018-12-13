@@ -1,0 +1,47 @@
+{
+  "model_name": "metal_classification_DNN_nepoch_6_nlayers_1_AROPB.tflearn",
+  "no_of_epochs": 6,
+  "time_passed_training": 1343.9452731609344,
+  "time_passed_testing": 79.41624474525452,
+  "accuracy": 0.4956094482194076,
+  "mini_accs": [
+    0.4936,
+    0.49761889643881524
+  ],
+  "no_train_files": 100100,
+  "no_test_files": 35749,
+  "gendict_train": {
+    "heavy": 25006,
+    "death": 24970,
+    "thrash": 25116,
+    "black": 25008
+  },
+  "gendict_test": {
+    "heavy": 8785,
+    "death": 9000,
+    "thrash": 9123,
+    "black": 8841
+  },
+  "proc_train": [
+    {
+      "heavy": 0.24981018981018982,
+      "death": 0.24945054945054945,
+      "thrash": 0.2509090909090909,
+      "black": 0.24983016983016984
+    },
+    100100
+  ],
+  "proc_test": [
+    {
+      "heavy": 0.24574113961229685,
+      "death": 0.25175529385437356,
+      "thrash": 0.25519594953705,
+      "black": 0.24730761699627962
+    },
+    35749
+  ],
+  "n_layers": 1,
+  "n_nodes": [
+    1024
+  ]
+}

@@ -1,0 +1,8 @@
+.idea/
+__pycache__/datasets/
+logs/
+intermed_model/
+model/
+datasets/
+__pycache__/
+*.log
