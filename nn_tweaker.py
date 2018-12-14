@@ -140,7 +140,7 @@ def run_tweaker_from_config(config_name="/home/cleptes/Programming/Python/ml_met
 
 
 if __name__ == "__main__":
-    #run_tweaker_from_config()
+    '''#run_tweaker_from_config()
     config_name="/home/cleptes/Programming/Python/ml_metal_genre_classification/config_to_run.json"
     config_store_dir="/home/cleptes/Programming/Python/ml_metal_genre_classification/only_best_configs/"
     import config
@@ -157,34 +157,36 @@ if __name__ == "__main__":
     print("End: ",time()-start)
 
     
-    '''gendict, n_all = get_number_for_each_genre(dataset_tools.import_dataset("train")[0])
+    gendict, n_all = get_number_for_each_genre(dataset_tools.import_dataset("train")[0])
     print("train", gendict)
     print("train", get_procentage(gendict, n_all))
     gendict, n_all = get_number_for_each_genre(dataset_tools.import_dataset("test")[0])
     print("test", gendict)
     print("test", get_procentage(gendict, n_all))  
     from importlib import reload
+    '''
+
     import config
     start = time()
     type_of_data = sys.argv[1]
     import dataset_tools
 
-    dataset_tools.create_dataset_from_slices()
-    tweak_by_epochtime(epoch_from=config.no_of_epochs)
-    config = reload(config)
-    dataset_tools.create_dataset_from_slices()
-    tweak_by_epochtime(n_layers=2, n_nodes=(1024, 1024), epoch_from=config.no_of_epochs)
-    config = reload(config)
+    #dataset_tools.create_dataset_from_slices()
+    #tweak_by_epochtime(epoch_from=config.no_of_epochs)
+    #config = reload(config)
+    #dataset_tools.create_dataset_from_slices()
+    #tweak_by_epochtime(n_layers=2, n_nodes=(1024, 1024), epoch_from=config.no_of_epochs)
+    #config = reload(config)
     dataset_tools.create_dataset_from_slices()
     tweak_by_epochtime(n_layers=2, n_nodes=(1024, 512), epoch_from=config.no_of_epochs)
-    config = reload(config)
-    dataset_tools.create_dataset_from_slices()
-    tweak_by_epochtime(n_layers=3, n_nodes=(1024, 512, 256), epoch_from=config.no_of_epochs)
-    config = reload(config)
-    dataset_tools.create_dataset_from_slices()
-    tweak_by_epochtime(n_layers=3, n_nodes=(1024, 1024, 512), epoch_from=config.no_of_epochs)
-    config = reload(config)
-    dataset_tools.create_dataset_from_slices()
-    tweak_by_epochtime(n_layers=3, n_nodes=(1024, 1024, 1024), epoch_from=config.no_of_epochs)
+    #config = reload(config)
+    #dataset_tools.create_dataset_from_slices()
+    #tweak_by_epochtime(n_layers=3, n_nodes=(1024, 512, 256), epoch_from=config.no_of_epochs)
+    #config = reload(config)
+    #dataset_tools.create_dataset_from_slices()
+    #tweak_by_epochtime(n_layers=3, n_nodes=(1024, 1024, 512), epoch_from=config.no_of_epochs)
+    #config = reload(config)
+    #dataset_tools.create_dataset_from_slices()
+    #tweak_by_epochtime(n_layers=3, n_nodes=(1024, 1024, 1024), epoch_from=config.no_of_epochs)
     print("full run: ",time()-start,"s")
-    '''
+    
